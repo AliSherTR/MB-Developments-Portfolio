@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
-// import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
     { name: "Product", href: "#" },
@@ -13,7 +12,7 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <div className="bg-white">
+        <div className="bg-white w-full fixed z-30 top-0">
             <header className="">
                 <nav
                     className="flex items-center justify-between p-6 lg:px-8"
@@ -22,11 +21,9 @@ export default function Header() {
                     <div className="flex lg:flex-1">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
-                            <img
-                                className="h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                alt=""
-                            />
+                            <span className="text-base font-semibold leading-6 text-gray-900">
+                                MB Developments
+                            </span>
                         </a>
                     </div>
                     <div className="flex lg:hidden">
@@ -57,7 +54,7 @@ export default function Header() {
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className="text-sm font-semibold leading-6 text-gray-900"
+                                className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-all ease-in-out "
                             >
                                 {item.name}
                             </a>
@@ -83,11 +80,9 @@ export default function Header() {
                         <div className="flex items-center justify-between">
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Your Company</span>
-                                <img
-                                    className="h-8 w-auto"
-                                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                    alt=""
-                                />
+                                <span className="text-base font-semibold leading-6 text-gray-900">
+                                    MB Developments
+                                </span>
                             </a>
                             <button
                                 type="button"
