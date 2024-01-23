@@ -3,7 +3,7 @@ import Hero from "../Components/Hero";
 
 export default function Homepage() {
     return (
-        <div className="max-w-[1500px] m-auto">
+        <div className="">
             <Header />
             <Hero />
             <div className=" h-screen"></div>

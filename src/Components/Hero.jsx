@@ -4,21 +4,21 @@ import Slider from "react-slick";
 import Slide from "./Slide";
 import { useState } from "react";
 export default function Hero() {
-    const [heroItems, setHeroItems] = useState([]);
+    // const [heroItems, setHeroItems] = useState([]);
 
-    async function fetchHeroItems() {
-        try {
-            const res = await fetch(
-                "http://localhost:1337/api/heroes?populate=*"
-            );
-            const data = await res.json();
-            console.log(data);
-        } catch (error) {
-            console.error(error.message);
-        }
-    }
+    // async function fetchHeroItems() {
+    //     try {
+    //         const res = await fetch(
+    //             "http://localhost:1337/api/heroes?populate=*"
+    //         );
+    //         const data = await res.json();
+    //         console.log(data);
+    //     } catch (error) {
+    //         console.error(error.message);
+    //     }
+    // }
 
-    fetchHeroItems();
+    // fetchHeroItems();
 
     const settings = {
         dots: false,
@@ -36,12 +36,22 @@ export default function Hero() {
             <Slider {...settings}>
                 <Slide
                     imageUrl={
-                        "https://cdn.pixabay.com/photo/2017/10/10/07/48/hills-2836301_640.jpg"
+                        "https://media.istockphoto.com/id/1418475387/photo/robotic-hand-pressing-a-keyboard-on-a-laptop-3d-rendering.webp?b=1&s=170667a&w=0&k=20&c=SH8IT_AwvssL7wNgwQpl5PGo_IXt7aKd_TeV9UGFBic="
                     }
                 />
                 <Slide
                     imageUrl={
-                        "https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705795200&semt=sph"
+                        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmUlMjBjb21wYW55fGVufDB8fDB8fHww"
+                    }
+                />
+                <Slide
+                    imageUrl={
+                        "https://media.istockphoto.com/id/1419766496/photo/abstract-concepts-of-cybersecurity-technology-and-digital-data-protection-protect-internet.webp?b=1&s=170667a&w=0&k=20&c=ymHzOpQBTrldJ5egITZZAgfc7PGmxZ2bP83eo-KjARM="
+                    }
+                />
+                <Slide
+                    imageUrl={
+                        "https://plus.unsplash.com/premium_photo-1678565202188-f69b2e593998?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNvZnR3YXJlJTIwY29tcGFueXxlbnwwfHwwfHx8MA%3D%3D"
                     }
                 />
             </Slider>

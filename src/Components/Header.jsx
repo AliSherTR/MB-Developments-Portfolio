@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 
 const navigation = [
@@ -10,26 +10,43 @@ const navigation = [
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+    const [scrolled, setScrolled] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            setScrolled(scrollY > 50);
+        };
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
-        <div className="bg-white w-full fixed z-30 top-0">
-            <header className="">
+        <div className=" relative overflow-hidden">
+            <header
+                className={`  fixed z-30 top-0 left-0 right-0 transition-all duration-300 ${
+                    scrolled ? "text-black" : "text-white"
+                }`}
+                style={{
+                    backgroundColor: scrolled
+                        ? "rgba(255, 255, 255, 1)"
+                        : "rgba(0, 0, 0, 0.5)",
+                }}
+            >
                 <nav
-                    className="flex items-center justify-between p-6 lg:px-8"
+                    className="flex items-center justify-between py-5 lg:py-3 md:p-5 px-2 font-inter font-medium text-base lg:px-8"
                     aria-label="Global"
                 >
                     <div className="flex lg:flex-1">
-                        <a href="#" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
-                            <span className="text-base font-semibold leading-6 text-gray-900">
-                                MB Developments
-                            </span>
+                        <a href="#" className="">
+                            <span className="leading-6 ">MB Developments</span>
                         </a>
                     </div>
                     <div className="flex lg:hidden">
                         <button
                             type="button"
-                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 "
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">Open main menu</span>
@@ -54,7 +71,7 @@ export default function Header() {
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-all ease-in-out "
+                                className="leading-6 hover:text-blue-700 transition-all ease-in-out "
                             >
                                 {item.name}
                             </a>
@@ -63,9 +80,9 @@ export default function Header() {
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                         <a
                             href="#"
-                            className="text-sm font-semibold leading-6 text-gray-900"
+                            className="me-1.5 bg-[#125697] px-5 py-2.5 font-semibold text-white rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 block font-inter "
                         >
-                            Log in <span aria-hidden="true">&rarr;</span>
+                            Log In &rarr;
                         </a>
                     </div>
                 </nav>
@@ -122,7 +139,7 @@ export default function Header() {
                                 <div className="py-6">
                                     <a
                                         href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        className="rounded-md bg-blue-700 px-5 py-2.5 font-roboto font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 md:m-auto"
                                     >
                                         Log in
                                     </a>
