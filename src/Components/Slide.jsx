@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
-export default function Slide({ imageUrl, text }) {
+export default function Slide({ imageUrl, text, featureLine }) {
     const controls = useAnimation();
 
     const startAnimation = () => {
@@ -17,7 +17,7 @@ export default function Slide({ imageUrl, text }) {
             <img
                 src={imageUrl}
                 alt=""
-                className="absolute z-[-1] w-full h-full"
+                className="absolute block z-[-1] w-full h-full"
             />
             <div className="absolute inset-0 bg-black opacity-[30%] z-10"></div>
             <motion.div className="absolute w-full px-2 md:w-[90%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-30">
@@ -27,12 +27,11 @@ export default function Slide({ imageUrl, text }) {
                     animate={{ y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    Established with a passion for{" "}
+                    {text}{" "}
                     <span className=" px-2 py-[0.3px] bg-white rounded-md text-[#FF4C54] font-bold text-base md:text-2xl lg:text-6xl">
                         {" "}
-                        Innovation
+                        {featureLine}
                     </span>{" "}
-                    and a commitment to excellence
                 </motion.p>
                 <motion.button
                     href="#"
