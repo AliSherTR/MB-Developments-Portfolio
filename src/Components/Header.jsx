@@ -26,12 +26,12 @@ export default function Header() {
         <div className=" relative overflow-hidden">
             <header
                 className={`  fixed z-30 top-0 left-0 right-0 transition-all duration-300 ${
-                    scrolled ? "text-[#444]" : "text-white"
+                    scrolled ? "text-white" : " text-[#444]"
                 }`}
                 style={{
                     backgroundColor: scrolled
-                        ? "rgba(255, 255, 255, .9)"
-                        : "rgba(0, 0, 0, 0.5)",
+                        ? " rgba(0, 0, 0, 0.5)"
+                        : "rgba(255, 255, 255, 1)",
                 }}
             >
                 <nav
