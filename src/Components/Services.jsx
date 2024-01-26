@@ -34,7 +34,7 @@ const services = [
 ];
 export default function Services() {
     return (
-        <div className=" flex-col">
+        <div className=" flex flex-col">
             <div className="p-2 font-inter text-[#444]">
                 <h2 className="text-3xl md:text-5xl font-bold mb-2 md:mb-4">
                     Our Services
@@ -58,7 +58,7 @@ export default function Services() {
             </div>
             <a
                 href="#"
-                className=" items-start inline-block my-3 bg-[#125697] px-5 py-2.5 font-semibold text-white rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 font-inter "
+                className="my-3  flex-grow-0 ms-auto bg-[#125697] px-5 py-2.5 font-semibold text-white rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 font-inter "
             >
                 See More &rarr;
             </a>
