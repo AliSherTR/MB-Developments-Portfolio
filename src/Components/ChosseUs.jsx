@@ -7,7 +7,7 @@ export default function ChosseUs() {
             <div className="flex flex-col md:flex-row md:mb-0 mb-5">
                 <div className="flex  flex-1 items-center justify-center md:order-2 order-1">
                     <img
-                        src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
+                        src="https://img.freepik.com/free-vector/project-management-business-multitasking-concept-flat-line-art-icons_126523-2192.jpg"
                         alt=""
                         className="rounded-lg md:w-[90%] w-full h-full block "
                     />
@@ -57,7 +57,7 @@ export default function ChosseUs() {
             <div className="flex flex-col md:flex-row md:mb-0 mb-5">
                 <div className="flex-1 flex items-center justify-center order-2 md:order-3">
                     <img
-                        src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
+                        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmUlMjBjb21wYW55fGVufDB8fDB8fHww"
                         alt=""
                         className="md:w-[90%] rounded-lg w-full h-full block "
                     />
