@@ -14,14 +14,45 @@ export default function AboutUs() {
                         commitment to excellence, MB Developments stands at the
                         forefront of the ever-evolving technology landscape.
                     </p>
-                    <div className=" flex text-white flex-col md:flex-row gap-y-3">
-                        <span className="px-3 py-3 rounded-md bg-blue-600 me-3">
+                    <ul className=" text-base md:text-lg ">
+                        <li className=" mb-2 flex items-center gap-2">
+                            {" "}
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="#444"
+                                className="w-4 h-4"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="m4.5 12.75 6 6 9-13.5"
+                                />
+                            </svg>{" "}
                             Latest Technology
-                        </span>
-                        <span className="px-3 py-3 rounded-md bg-blue-600">
+                        </li>
+                        <li className="mb-2 flex items-center gap-2">
+                            {" "}
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="#444"
+                                className="w-4 h-4"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="m4.5 12.75 6 6 9-13.5"
+                                />
+                            </svg>{" "}
                             Marketing Management
-                        </span>
-                    </div>
+                        </li>
+                    </ul>
+
                     <a
                         href="#"
                         className="my-3 inline-block bg-[#125697] px-5 py-2.5 font-semibold text-white rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 font-inter "

@@ -39,8 +39,8 @@ export default function Slide({ imageUrl, text, featureLine }) {
                         {" " + featureLine}
                     </span>{" "}
                 </motion.p>
-                <motion.button
-                    href="#"
+                <motion.a
+                    href="#services"
                     className="me-1.5 bg-[#125697] px-5 py-2.5 font-semibold text-white rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-sm md:text-2xl
                         focus-visible:outline-blue-700 block font-inter"
                     initial={{ opacity: 0, x: 100 }}
@@ -49,7 +49,7 @@ export default function Slide({ imageUrl, text, featureLine }) {
                     onClick={startAnimation}
                 >
                     Get started <span>&rarr;</span>
-                </motion.button>
+                </motion.a>
             </motion.div>
         </motion.div>
     );
