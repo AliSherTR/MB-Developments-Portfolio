@@ -93,7 +93,7 @@ export default function ChosseUs() {
                 </div>
                 <div className="flex flex-1 justify-center items-center">
                     <img
-                        src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
+                        src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                         alt=""
                         className="md:w-[90%] w-full rounded-lg h-full block"
                     />

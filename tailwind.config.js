@@ -6,7 +6,11 @@ export default {
             roboto: ["Roboto", "sans-serif"],
             inter: ["Inter", "sans-serif"],
         },
-        extend: {},
+        extend: {
+            aspectRatio: {
+                "4/3": "4 / 3",
+            },
+        },
     },
     plugins: [],
 };
