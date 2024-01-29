@@ -3,6 +3,13 @@ import { useEffect } from "react";
 
 export default function Slide({ imageUrl, text, featureLine }) {
     const controls = useAnimation();
+    const words = text.split(" ");
+
+    const capitalizedSentence = words
+        .map((word) => {
+            return word[0].toUpperCase() + word.substring(1);
+        })
+        .join(" ");
 
     const startAnimation = () => {
         controls.start({ x: 0 });
@@ -27,10 +34,10 @@ export default function Slide({ imageUrl, text, featureLine }) {
                     animate={{ y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    {text}{" "}
+                    {capitalizedSentence}
                     <span className=" px-2 py-[0.3px] bg-white rounded-md text-[#FF4C54] font-bold text-base md:text-2xl lg:text-6xl">
-                        {" "}
-                        {featureLine}
+                        {"   "}
+                        {" " + featureLine}
                     </span>{" "}
                 </motion.p>
                 <motion.button

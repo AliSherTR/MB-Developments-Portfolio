@@ -8,7 +8,7 @@ export default function Homepage() {
         <div className="">
             <Header />
             <Hero />
-            <main className="p-6 max-w-[1300px] m-auto mt-4 flex flex-col gap-5">
+            <main className="p-6 max-w-[1200px] m-auto mt-4 flex flex-col gap-5">
                 <Services />
                 <ChosseUs />
             </main>

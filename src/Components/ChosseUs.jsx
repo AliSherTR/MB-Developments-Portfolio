@@ -5,7 +5,7 @@ export default function ChosseUs() {
                 Why Choose Us
             </h2>
             <div className="flex flex-col md:flex-row md:mb-0 mb-5">
-                <div className="flex flex-1 items-center justify-center md:order-2 order-1">
+                <div className="flex  flex-1 items-center justify-center md:order-2 order-1">
                     <img
                         src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
                         alt=""
