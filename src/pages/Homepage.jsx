@@ -1,3 +1,4 @@
+import AboutUs from "../Components/AboutUs";
 import ChosseUs from "../Components/ChosseUs";
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
@@ -9,6 +10,7 @@ export default function Homepage() {
             <Header />
             <Hero />
             <main className="p-6 max-w-[1200px] m-auto mt-4 flex flex-col gap-5">
+                <AboutUs />
                 <Services />
                 <ChosseUs />
             </main>
