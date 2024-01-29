@@ -5,13 +5,16 @@ export default function ChosseUs() {
                 Why Choose Us
             </h2>
             <div className="flex flex-col md:flex-row md:mb-0 mb-5">
-                <img
-                    src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
-                    alt=""
-                    className=" flex-1 rounded-lg w-full h-full block md:order-2 order-1"
-                />
-                <div className=" flex-1 md:pe-6 mb-5 md:mb-0 order-1">
-                    <h2 className="text-xl md:text-3xl font-semibold mb-2 md:mb-4">
+                <div className="flex flex-1 items-center justify-center md:order-2 order-1">
+                    <img
+                        src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
+                        alt=""
+                        className="rounded-lg md:w-[90%] w-full h-full block "
+                    />
+                </div>
+
+                <div className=" flex-1 md:pe-6 mb-5 md:mb-0 order-1 self-center">
+                    <h2 className="text-xl md:text-3xl font-semibold mb-2 md:mb-4 md:mt-0 mt-3">
                         Collaboration, Creativity, and Client-Centricity
                     </h2>
                     <p className="font-inter leading-relaxed text-[#444]">
@@ -27,8 +30,8 @@ export default function ChosseUs() {
             </div>
 
             <div className="flex flex-col md:flex-row md:mb-0 mb-5">
-                <div className=" flex-1 md:ps-6 mb-5 md:mb-0 order-1 md:order-2">
-                    <h2 className="text-xl md:text-3xl font-semibold mb-2 md:mb-4">
+                <div className=" flex-1 md:ps-6 mb-5 md:mb-0 order-1 md:order-2 self-center">
+                    <h2 className="text-xl md:text-3xl font-semibold mb-2 md:mb-4 md:mt-0 mt-3">
                         Innovation Meets Expertise
                     </h2>
                     <p className="font-inter leading-relaxed text-[#444]">
@@ -42,21 +45,26 @@ export default function ChosseUs() {
                         your gateway to success.
                     </p>
                 </div>
-                <img
-                    src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
-                    alt=""
-                    className=" flex-1 rounded-lg w-full h-full block"
-                />
+                <div className=" flex flex-1 items-center justify-center">
+                    <img
+                        src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
+                        alt=""
+                        className="md:w-[90%] w-full rounded-lg h-full block"
+                    />
+                </div>
             </div>
 
             <div className="flex flex-col md:flex-row md:mb-0 mb-5">
-                <img
-                    src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
-                    alt=""
-                    className=" flex-1 rounded-lg w-full h-full block order-2 md:order-3"
-                />
-                <div className=" flex-1 md:pe-6 mb-5 md:mb-0 md:order-2 order-3 ">
-                    <h2 className="text-xl md:text-3xl font-semibold mb-2 md:mb-4">
+                <div className="flex-1 flex items-center justify-center order-2 md:order-3">
+                    <img
+                        src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
+                        alt=""
+                        className="md:w-[90%] rounded-lg w-full h-full block "
+                    />
+                </div>
+
+                <div className=" flex-1 md:pe-6 mb-5 md:mb-0 md:order-2 order-3 self-center ">
+                    <h2 className="text-xl md:text-3xl font-semibold mb-2 md:mb-4 md:mt-0 mt-3">
                         Explore, Innovate, Thrive
                     </h2>
                     <p className="font-inter leading-relaxed text-[#444]">
@@ -70,8 +78,8 @@ export default function ChosseUs() {
             </div>
 
             <div className="flex flex-col md:flex-row ">
-                <div className="flex-1 md:ps-6 mb-5 md:mb-0 md:order-2 order-1">
-                    <h2 className="text-xl md:text-3xl font-semibold mb-2 md:mb-4">
+                <div className="flex-1 md:ps-6 mb-5 md:mb-0 md:order-2 order-1 self-center">
+                    <h2 className="text-xl md:text-3xl font-semibold mb-2 md:mb-4 md:mt-0 mt-3">
                         Empowering Innovation, Transforming Futures
                     </h2>
                     <p className="font-inter leading-relaxed text-[#444]">
@@ -83,11 +91,13 @@ export default function ChosseUs() {
                         to pushing the boundaries of {`what's`} possible.
                     </p>
                 </div>
-                <img
-                    src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
-                    alt=""
-                    className=" flex-1 rounded-lg w-full h-full block"
-                />
+                <div className="flex flex-1 justify-center items-center">
+                    <img
+                        src="https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg"
+                        alt=""
+                        className="md:w-[90%] w-full rounded-lg h-full block"
+                    />
+                </div>
             </div>
         </section>
     );
