@@ -1,4 +1,5 @@
 import AboutUs from "../Components/AboutUs";
+import Careers from "../Components/Careers";
 import ChosseUs from "../Components/ChosseUs";
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
@@ -13,6 +14,7 @@ export default function Homepage() {
                 <AboutUs />
                 <Services />
                 <ChosseUs />
+                <Careers />
             </main>
         </div>
     );
