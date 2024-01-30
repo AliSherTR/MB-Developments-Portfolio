@@ -2,7 +2,7 @@ export default function Careers() {
     return (
         <section
             id="careers"
-            className=" mt-3 text-white font-inter p-6 rounded-md"
+            className=" my-3 text-white font-inter p-6 rounded-md"
             style={{
                 backgroundImage:
                     "url(https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg)",

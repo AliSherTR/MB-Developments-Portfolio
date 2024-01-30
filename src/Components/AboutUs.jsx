@@ -1,6 +1,6 @@
 export default function AboutUs() {
     return (
-        <section id="about-us" className="text-[#444] p-2">
+        <section id="about-us" className="text-[#444] p-2 my-3">
             <h2 className="text-3xl md:text-5xl font-bold mb-2 md:mb-4">
                 About Us
             </h2>

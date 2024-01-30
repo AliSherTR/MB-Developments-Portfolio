@@ -34,7 +34,7 @@ const services = [
 ];
 export default function Services() {
     return (
-        <section id="services" className=" flex flex-col">
+        <section id="services" className=" flex flex-col my-3">
             <div className="p-2 font-inter text-[#444]">
                 <h2 className="text-3xl md:text-5xl font-bold mb-2 md:mb-4">
                     Our Services

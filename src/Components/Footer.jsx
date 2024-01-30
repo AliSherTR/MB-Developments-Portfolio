@@ -38,7 +38,6 @@ const footerLinks = [
         href: "#",
     },
 ];
-console.log(socialUrl);
 
 export default function Footer() {
     return (

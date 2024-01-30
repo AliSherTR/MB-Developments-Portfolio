@@ -3,7 +3,7 @@ import TeamCard from "./TeamCard";
 
 export default function OurTeam() {
     return (
-        <section id="team">
+        <section id="team" className=" my-3">
             <div className="p-2 text-[#444]">
                 <h2 className="text-3xl md:text-5xl font-bold mb-2 md:mb-4">
                     Our Team

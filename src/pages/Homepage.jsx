@@ -6,6 +6,7 @@ import Header from "../Components/Header";
 import Hero from "../Components/Hero";
 import OurTeam from "../Components/OurTeam";
 import Services from "../Components/Services";
+import Testimonials from "../Components/Testimonials";
 
 export default function Homepage() {
     return (
@@ -18,6 +19,7 @@ export default function Homepage() {
                 <ChosseUs />
                 <Careers />
                 <OurTeam />
+                <Testimonials />
             </main>
             <Footer />
         </div>

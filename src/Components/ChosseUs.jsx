@@ -1,6 +1,6 @@
 export default function ChosseUs() {
     return (
-        <section className=" flex flex-col gap-3">
+        <section className=" flex flex-col gap-3 my-3">
             <h2 className="font-inter text-3xl md:text-5xl font-bold mb-2 md:mb-4">
                 Why Choose Us
             </h2>
