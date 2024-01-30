@@ -2,24 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Slide from "./Slide";
-import { useState } from "react";
 export default function Hero() {
-    // const [heroItems, setHeroItems] = useState([]);
-
-    // async function fetchHeroItems() {
-    //     try {
-    //         const res = await fetch(
-    //             "http://localhost:1337/api/heroes?populate=*"
-    //         );
-    //         const data = await res.json();
-    //         console.log(data);
-    //     } catch (error) {
-    //         console.error(error.message);
-    //     }
-    // }
-
-    // fetchHeroItems();
-
     const settings = {
         dots: false,
         infinite: true,

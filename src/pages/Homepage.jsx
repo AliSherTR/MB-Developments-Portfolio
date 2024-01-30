@@ -1,8 +1,10 @@
 import AboutUs from "../Components/AboutUs";
 import Careers from "../Components/Careers";
 import ChosseUs from "../Components/ChosseUs";
+import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
+import OurTeam from "../Components/OurTeam";
 import Services from "../Components/Services";
 
 export default function Homepage() {
@@ -15,7 +17,9 @@ export default function Homepage() {
                 <Services />
                 <ChosseUs />
                 <Careers />
+                <OurTeam />
             </main>
+            <Footer />
         </div>
     );
 }
