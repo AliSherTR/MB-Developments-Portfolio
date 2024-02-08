@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
 const navigation = [
-    { name: "Product", href: "#" },
-    { name: "Features", href: "#services" },
+    { name: "Product", href: "/" },
+    { name: "Features", href: "/services" },
     { name: "Marketplace", href: "#" },
     { name: "Company", href: "#team" },
 ];
@@ -39,9 +40,9 @@ export default function Header() {
                     aria-label="Global"
                 >
                     <div className="flex lg:flex-1">
-                        <a href="#" className="">
+                        <Link to="/" className="">
                             <span className="leading-6 ">MB Developments</span>
-                        </a>
+                        </Link>
                     </div>
                     <div className="flex lg:hidden">
                         <button
@@ -68,13 +69,13 @@ export default function Header() {
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12">
                         {navigation.map((item) => (
-                            <a
+                            <Link
                                 key={item.name}
-                                href={item.href}
+                                to={item.href}
                                 className="leading-6 hover:text-blue-700 transition-all ease-in-out "
                             >
                                 {item.name}
-                            </a>
+                            </Link>
                         ))}
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">

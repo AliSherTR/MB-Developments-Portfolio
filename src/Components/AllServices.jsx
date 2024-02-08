@@ -3,15 +3,15 @@ import ServiceCard from "./ServiceCard";
 
 const services = [
     {
-        name: "Software Development",
+        name: "Web Development",
         imageUrl:
             "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         list_items: [
-            "Custom Software Development",
             "Backend Development",
             "Frontend Development",
             "Full Stack Development",
             "Wordpress Development",
+            "MERN Stack Development",
         ],
     },
     {
@@ -21,82 +21,55 @@ const services = [
 
         list_items: [
             "Project Planning",
-            "Backend Development",
             "Team Coordination",
             "Risk Management",
         ],
     },
     {
-        name: "Skill Development",
+        name: "Marketing",
         imageUrl:
             "https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg",
         list_items: ["Employee Training", "Knowledge Sharing"],
     },
     {
-        name: "Software Development",
+        name: "Search Engine Optimization (SEO)",
         imageUrl:
-            "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "https://www.ampfluence.com/wp-content/uploads/2021/04/Pinterest-SEO-Effective-Ways-to-Optimize-Pinterest-Profile.png",
         list_items: [
-            "Custom Software Development",
-            "Backend Development",
-            "Frontend Development",
-            "Full Stack Development",
-            "Wordpress Development",
+            "Google Analytics",
+            "Google Search Score",
+            "Moz Pro",
+            "Yoast SEO",
         ],
     },
     {
-        name: "Project Management",
+        name: "Graphic Design",
         imageUrl:
-            "https://img.freepik.com/free-vector/project-management-business-multitasking-concept-flat-line-art-icons_126523-2192.jpg",
+            "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JhcGhpYyUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
 
         list_items: [
-            "Project Planning",
-            "Backend Development",
-            "Team Coordination",
-            "Risk Management",
+            "Adobe Illustrator",
+            "Adobe Photoshop",
+            "Adobe After Effects",
+            "Logo Designing",
         ],
     },
     {
-        name: "Skill Development",
-        imageUrl:
-            "https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg",
-        list_items: ["Employee Training", "Knowledge Sharing"],
-    },
-    {
-        name: "Software Development",
-        imageUrl:
-            "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        name: "UI/UX Design",
+        imageUrl: "https://segwitz.com/wp-content/uploads/5757453-scaled.jpg",
         list_items: [
-            "Custom Software Development",
-            "Backend Development",
-            "Frontend Development",
-            "Full Stack Development",
-            "Wordpress Development",
+            "Figma",
+            "Mobile App Desing",
+            "Website Design",
+            "Application Design",
         ],
-    },
-    {
-        name: "Project Management",
-        imageUrl:
-            "https://img.freepik.com/free-vector/project-management-business-multitasking-concept-flat-line-art-icons_126523-2192.jpg",
-
-        list_items: [
-            "Project Planning",
-            "Backend Development",
-            "Team Coordination",
-            "Risk Management",
-        ],
-    },
-    {
-        name: "Skill Development",
-        imageUrl:
-            "https://t4.ftcdn.net/jpg/01/31/96/99/360_F_131969925_4npM7jqii8Dlo76mRROdD0r285Oojc8d.jpg",
-        list_items: ["Employee Training", "Knowledge Sharing"],
     },
 ];
 export default function AllServices() {
     useEffect(() => {
         window.scrollTo(0, 0); // Scrolls to the top of the page on load
     }, []);
+
     return (
         <main
             className="p-6 max-w-[1200px] m-auto mt-4 flex flex-col gap-5"

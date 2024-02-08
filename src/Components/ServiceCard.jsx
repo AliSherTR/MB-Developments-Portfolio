@@ -1,6 +1,6 @@
 export default function ServiceCard({ imageUrl, name, listItems }) {
     return (
-        <div className="flex cursor-pointer flex-col border rounded-lg shadow-lg hover:shadow-2xl transition-all ease-in-out pb-4">
+        <div className="flex cursor-pointer flex-col border rounded-lg shadow-lg hover:shadow-2xl transition-all ease-in-out pb-4 overflow-hidden">
             <div className="mb-8 h-[200px] overflow-hidden">
                 <img src={imageUrl} alt="Image" className=" w-full" />
             </div>

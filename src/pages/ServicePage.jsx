@@ -1,9 +1,25 @@
+import { useEffect, useState } from "react";
 import AllServices from "../Components/AllServices";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import PageBanner from "../Components/PageBanner";
+import Loader from "../Components/Loader";
 
 export default function ServicePage() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+        return () => clearTimeout(timeout);
+    }, []);
+    if (loading)
+        return (
+            <div className=" h-screen flex items-center justify-center">
+                <Loader />
+            </div>
+        );
     return (
         <div className=" relative">
             <Header />
