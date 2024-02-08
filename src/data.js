@@ -20,7 +20,7 @@ export const teamData = [
     {
         name: "Emily Davis",
         imageURL:
-            "https://lh3.googleusercontent.com/proxy/OWQIg5Ph7xxKtcDfCqUcqchThrC4u_mnZYmDpIB5vyUzu2rtyZ6d4kQouv_8d3IRmMgk_eFdaP4PAJ12tIwF14wKAO8NfZ2B18iJzSGXSGN1fI2lT-IgZkfxdoDvUita1rFR-ZWAun4oej0bY-oV2pRXYwuH",
+            "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         designation: "Marketing Specialist",
     },
     {
