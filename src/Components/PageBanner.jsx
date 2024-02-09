@@ -8,7 +8,7 @@ export default function PageBanner({ imageUrl }) {
                 alt=""
                 className=" absolute w-full top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%]"
             />
-            <div className="text-lg p-6 text-white font-semibold relative z-[100]">
+            <div className="text-lg p-6 text-white font-semibold relative ">
                 <Link to={"/"}>Home</Link>
                 {" > "}
                 <Link to={"/services"}>Services</Link>
