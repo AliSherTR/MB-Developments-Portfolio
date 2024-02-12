@@ -35,8 +35,8 @@ const footerLinks = [
         href: "#",
     },
     {
-        name: "Company",
-        href: "#",
+        name: "Contact Us",
+        href: "/contact-us",
     },
 ];
 

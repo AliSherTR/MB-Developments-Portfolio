@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ServiceCard from "./ServiceCard";
+import Button from "./Button";
 
 const services = [
     {
@@ -57,13 +58,9 @@ export default function Services() {
                     />
                 ))}
             </div>
-            <Link
-                to={"/services"}
-                href="#"
-                className="my-3  flex-grow-0 ms-auto bg-[#125697] px-5 py-2.5 font-semibold text-white rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 font-inter "
-            >
-                See More &rarr;
-            </Link>
+            <div className=" self-end">
+                <Button location={"/services"} text={"See More"} />
+            </div>
         </section>
     );
 }

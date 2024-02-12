@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "./Button";
 
 export default function AboutUs() {
     return (
@@ -54,13 +55,9 @@ export default function AboutUs() {
                             Marketing Management
                         </li>
                     </ul>
-
-                    <Link
-                        to="/about-us"
-                        className="my-3 inline-block bg-[#125697] px-5 py-2.5 font-semibold text-white rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 font-inter "
-                    >
-                        Learn More &rarr;
-                    </Link>
+                    <div>
+                        <Button location={"/about-us"} text={"Learn More"} />
+                    </div>
                 </div>
                 <div className=" flex-1 md:order-3 order-1 relative min-h-[60vh] overflow-hidden">
                     <figure>

@@ -2,14 +2,30 @@ import ContactUs from "../Components/ContactUs";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import PageBanner from "../Components/PageBanner";
+import Loader from "../Components/Loader";
+import { useEffect, useState } from "react";
 
 export default function ContactUsPage() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+        return () => clearTimeout(timeout);
+    }, []);
+    if (loading)
+        return (
+            <div className=" h-screen flex items-center justify-center">
+                <Loader />
+            </div>
+        );
     return (
         <div className=" relative">
             <Header />
             <PageBanner
                 imageUrl={
-                    "https://media.istockphoto.com/id/1418475387/photo/robotic-hand-pressing-a-keyboard-on-a-laptop-3d-rendering.webp?b=1&s=170667a&w=0&k=20&c=SH8IT_AwvssL7wNgwQpl5PGo_IXt7aKd_TeV9UGFBic="
+                    "https://leadershipconsulting.com/dev/wp-content/uploads/2017/12/AdobeStock_68129542.jpg"
                 }
                 page_link={"/contact-us"}
                 page_link_text={"Contact Us"}

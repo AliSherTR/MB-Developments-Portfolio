@@ -25,7 +25,7 @@ export default function ServicePage() {
             <Header />
             <PageBanner
                 imageUrl={
-                    "https://media.istockphoto.com/id/1418475387/photo/robotic-hand-pressing-a-keyboard-on-a-laptop-3d-rendering.webp?b=1&s=170667a&w=0&k=20&c=SH8IT_AwvssL7wNgwQpl5PGo_IXt7aKd_TeV9UGFBic="
+                    "https://www.nttdata.com/my/en/-/media/nttdataapac/ndmy/services/infrastructure-services/infrastructure_services-header-2732x1536_1.jpg?h=1536&iar=0&w=2732&rev=d771f81edccc4725bef0dd18938d4312"
                 }
                 page_link={"/services"}
                 page_link_text={"Services"}

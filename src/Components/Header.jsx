@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Link } from "react-router-dom";
+import Button from "./Button";
 
 const navigation = [
     { name: "About Us", href: "/about-us" },
@@ -81,12 +82,7 @@ export default function Header() {
                         ))}
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <a
-                            href="#"
-                            className="me-1.5 bg-[#125697] px-5 py-2.5 font-semibold text-white rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 block font-inter "
-                        >
-                            Log In &rarr;
-                        </a>
+                        <Button text={"Log In"} />
                     </div>
                 </nav>
                 <Dialog

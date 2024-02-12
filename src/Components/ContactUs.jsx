@@ -1,24 +1,26 @@
+import Button from "./Button";
+
 export default function ContactUs() {
     return (
         <section className="py-6">
             <h2 className="text-3xl md:text-5xl font-bold mb-2 md:mb-4 text-[#444]">
                 Contact Us
             </h2>
-            <form action="" className=" flex">
+            <form action="" className="flex flex-col md:flex-row">
                 <div className=" flex-1 self-center flex flex-col pe-6 gap-y-3">
                     <p className=" text-base text-[#444] ">
                         Hey there! 🚀 Ready to take the next step? Drop us a
                         line! Whether you have questions, ideas, or just want to
-                        say hello, we're all ears. Fill out the form below, and
-                        let's start a conversation that could lead to something
-                        amazing. Your thoughts matter to us, and we can't wait
-                        to hear from you! 📝💬
+                        say hello, {"we're"} all ears. Fill out the form below,
+                        and {"let's"} start a conversation that could lead to
+                        something amazing. Your thoughts matter to us, and we
+                        {"can't"} wait to hear from you! 📝💬
                     </p>
-                    <div className=" flex gap-3">
+                    <div className=" flex md:flex-row flex-col gap-3">
                         <input
                             type="text"
                             placeholder="First Name"
-                            className="border px-2 py-2 flex-1 rounded-sm"
+                            className="border px-2 py-4 flex-1 rounded-sm"
                         />
                         <input
                             type="text"
@@ -35,9 +37,9 @@ export default function ContactUs() {
                         placeholder="Write your queries here"
                         className=" border px-2 py-4 flex-1 rounded-sm"
                     />
-                    <button className=" self-start block mt-3 px-3 py-2 bg-blue-400 rounded-md text-white">
-                        Submit Form
-                    </button>
+                    <div>
+                        <Button text={"Submit"} />
+                    </div>
                 </div>
                 <div className=" flex-1">
                     <img
