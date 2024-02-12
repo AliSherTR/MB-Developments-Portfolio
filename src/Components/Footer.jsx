@@ -1,5 +1,6 @@
 import { SocialIcon } from "react-social-icons";
 import { HiChevronRight } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const socialUrl = [
     {
@@ -22,12 +23,12 @@ const socialUrl = [
 
 const footerLinks = [
     {
-        name: "Products",
-        href: "#",
+        name: "About Us",
+        href: "/about-us",
     },
     {
-        name: "Features",
-        href: "#",
+        name: "Services",
+        href: "/services",
     },
     {
         name: "Marketplace",
@@ -89,7 +90,7 @@ export default function Footer() {
                                     key={i}
                                 >
                                     <HiChevronRight />
-                                    <a href={link.href}>{link.name}</a>
+                                    <Link to={link.href}>{link.name}</Link>
                                 </li>
                             );
                         })}

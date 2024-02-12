@@ -112,3 +112,69 @@ export const allServices = [
         ],
     },
 ];
+
+export const smallSolutionsCard = [
+    {
+        heading: "Software Development",
+        description:
+            "Design, develop, and deploy tailored solutions to meet specific client needs.",
+        imageUrl:
+            "https://cdni.iconscout.com/illustration/premium/thumb/software-development-2602883-2194271.png",
+    },
+    {
+        heading: "Client Interaction",
+        description:
+            "Engage with clients to understand business requirements and translate them into technical specifications.",
+        imageUrl:
+            "https://img.freepik.com/free-vector/businessmen-shaking-hands-through-display-video-call-smart-phone-internet-business-concept-cartoon-character-vector-illustration_1150-56245.jpg",
+    },
+    {
+        heading: "Project Management",
+        description:
+            "Develop comprehensive project plans with timelines, milestones, and resource requirements.",
+        imageUrl:
+            "https://cdni.iconscout.com/illustration/premium/thumb/project-manager-4757553-3956356.png",
+    },
+    {
+        heading: "Technology and Innovation",
+        description:
+            "Keep abreast of the latest technologies, tools, and methodologies in software development",
+        imageUrl:
+            "https://i.pinimg.com/originals/de/83/92/de83924ed08a6500e33c5995ad05027c.jpg",
+    },
+    {
+        heading: "Security and Compliance",
+        description:
+            "Implement measures to protect sensitive data and ensure compliance with data protection regulations",
+        imageUrl:
+            "https://img.freepik.com/free-vector/flat-design-concept-steal-data_23-2148539509.jpg?size=338&ext=jpg&ga=GA1.1.1412446893.1704672000&semt=ais",
+    },
+    {
+        heading: "Software Development",
+        description:
+            "Design, develop, and deploy tailored solutions to meet specific client needs.",
+        imageUrl:
+            "https://cdni.iconscout.com/illustration/premium/thumb/software-development-2602883-2194271.png",
+    },
+    {
+        heading: "Training and Skill Development",
+        description:
+            "Provide continuous training and skill development opportunities for team members.",
+        imageUrl:
+            "https://media.licdn.com/dms/image/C4E12AQEUEaDgDFgztQ/article-cover_image-shrink_600_2000/0/1636384964843?e=2147483647&v=beta&t=zFM0SYjsYQrxTrhd4cZzSD-3XI2kGZ8yujrq7_rjM4w",
+    },
+    {
+        heading: "Marketing and Business Development",
+        description:
+            "Explore and secure new clients through effective business development strategies.",
+        imageUrl:
+            "https://learn.g2.com/hubfs/G2CM_BI190_Backlog_Images_%5BBusiness_dev_mgr%5D_V1b.png",
+    },
+    {
+        heading: "Ethical and Professional Conduct",
+        description:
+            "Uphold ethical standards in software development, respecting intellectual property and client confidentiality.",
+        imageUrl:
+            "https://t3.ftcdn.net/jpg/04/30/16/80/360_F_430168045_0YC0OH4fuEju8Dv7C4AJLS2LV73JC4F2.jpg",
+    },
+];

@@ -1,6 +1,6 @@
 export default function TestimonialCard() {
     return (
-        <div className=" font-inter border me-2 p-6 text-center rounded-md text-[#444] hover:bg-blue-900 hover:text-white hover:translate-y-[-10px] ease-in-out duration-500">
+        <div className=" font-inter border me-2 p-6 text-center rounded-md text-[#444]">
             <p className=" text-sm md:text-base font-inter ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
                 expedita. Lorem ipsum dolor sit amet consectetur adipisicing

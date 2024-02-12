@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function AboutUs() {
     return (
         <section id="about-us" className="text-[#444] p-2 my-3">
@@ -53,12 +55,12 @@ export default function AboutUs() {
                         </li>
                     </ul>
 
-                    <a
-                        href="#"
+                    <Link
+                        to="/about-us"
                         className="my-3 inline-block bg-[#125697] px-5 py-2.5 font-semibold text-white rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 font-inter "
                     >
                         Learn More &rarr;
-                    </a>
+                    </Link>
                 </div>
                 <div className=" flex-1 md:order-3 order-1 relative min-h-[60vh] overflow-hidden">
                     <figure>

@@ -27,6 +27,8 @@ export default function ServicePage() {
                 imageUrl={
                     "https://media.istockphoto.com/id/1418475387/photo/robotic-hand-pressing-a-keyboard-on-a-laptop-3d-rendering.webp?b=1&s=170667a&w=0&k=20&c=SH8IT_AwvssL7wNgwQpl5PGo_IXt7aKd_TeV9UGFBic="
                 }
+                page_link={"/services"}
+                page_link_text={"Services"}
             />
             <AllServices />
             <Footer />

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function PageBanner({ imageUrl }) {
+export default function PageBanner({ imageUrl, page_link, page_link_text }) {
     return (
         <div className=" xl:h-[40vh] lg:h-[50vh] md:h-[30vh] h-[20vh] overflow-hidden relative ">
             <img
@@ -11,7 +11,7 @@ export default function PageBanner({ imageUrl }) {
             <div className="text-lg p-6 text-white font-semibold relative ">
                 <Link to={"/"}>Home</Link>
                 {" > "}
-                <Link to={"/services"}>Services</Link>
+                <Link to={page_link}>{page_link_text}</Link>
             </div>
         </div>
     );

@@ -3,8 +3,8 @@ import { Dialog } from "@headlessui/react";
 import { Link } from "react-router-dom";
 
 const navigation = [
-    { name: "Product", href: "/" },
-    { name: "Features", href: "/services" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Services", href: "/services" },
     { name: "Marketplace", href: "#" },
     { name: "Company", href: "#team" },
 ];
@@ -27,7 +27,9 @@ export default function Header() {
         <div className=" relative overflow-hidden">
             <header
                 className={` z-30 top-0 left-0 right-0 transition-all duration-300 ${
-                    scrolled ? "text-white fixed" : " text-[#444]"
+                    scrolled
+                        ? "text-white fixed transition-all"
+                        : " text-[#444]"
                 }`}
                 style={{
                     backgroundColor: scrolled

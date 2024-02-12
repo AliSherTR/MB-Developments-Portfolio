@@ -8,10 +8,7 @@ export default function AllServices() {
     }, []);
 
     return (
-        <main
-            className="p-6 max-w-[1200px] m-auto mt-4 flex flex-col gap-5"
-            id="#services"
-        >
+        <main className="p-6 max-w-[1200px] m-auto mt-4 flex flex-col gap-5">
             <div className="p-2 font-inter text-[#444]">
                 <h2 className="text-3xl md:text-5xl font-bold mb-2 md:mb-4">
                     Our Services
