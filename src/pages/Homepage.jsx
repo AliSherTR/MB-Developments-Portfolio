@@ -1,6 +1,7 @@
 import AboutUs from "../Components/AboutUs";
 import Careers from "../Components/Careers";
 import ChosseUs from "../Components/ChosseUs";
+import ContactUs from "../Components/ContactUs";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
@@ -20,6 +21,7 @@ export default function Homepage() {
                 <Careers />
                 <OurTeam />
                 <Testimonials />
+                <ContactUs />
             </main>
             <Footer />
         </div>
