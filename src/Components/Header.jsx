@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
+import logo from "../assets/logo.jpg";
 
 const navigation = [
     { name: "About Us", href: "/about-us" },
@@ -44,7 +45,11 @@ export default function Header() {
                 >
                     <div className="flex lg:flex-1">
                         <Link to="/" className="">
-                            <span className="leading-6 ">MB Developments</span>
+                            <img
+                                src={logo}
+                                alt="MB Developments"
+                                className=" w-10 h-10 md:w-14 md:h-14 rounded-full "
+                            />
                         </Link>
                     </div>
                     <div className="flex lg:hidden">
@@ -94,12 +99,13 @@ export default function Header() {
                     <div className="fixed inset-0 z-50" />
                     <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
-                            <a href="#" className="-m-1.5 p-1.5">
-                                <span className="sr-only">Your Company</span>
-                                <span className="text-base font-semibold leading-6 text-gray-900">
-                                    MB Developments
-                                </span>
-                            </a>
+                            <Link to="/" className="-m-1.5 p-1.5">
+                                <img
+                                    src={logo}
+                                    alt="MB Developments"
+                                    className=" w-10 h-10 md:w-14 md:h-14 rounded-full "
+                                />
+                            </Link>
                             <button
                                 type="button"
                                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
