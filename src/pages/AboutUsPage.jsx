@@ -47,10 +47,16 @@ export default function AboutUsPage() {
                         </p>
                     </div>
                     <div className=" flex-1">
-                        <img
+                        {/* <img
                             src="https://miro.medium.com/v2/resize:fit:848/0*vafo6t1qd2yv_g9O.png"
                             alt=""
-                            className=" md:w-3/4 w-full block m-auto "
+                            className=" w-full block m-auto "
+                        /> */}
+
+                        <img
+                            src="https://www.blogtyrant.com/wp-content/uploads/2019/12/best-contact-us-pages-2.png"
+                            alt="about us"
+                            className=" w-full block m-auto"
                         />
                     </div>
                 </div>
@@ -59,7 +65,7 @@ export default function AboutUsPage() {
                     Our Mission
                 </h2>
                 <div className="flex flex-col md:flex-row gap-y-4">
-                    <div className=" mt-4 flex-1 pe-6">
+                    <div className="mt-4 flex-1 pe-6">
                         <p className=" text-base md:text-lg text-[#444] ">
                             Our mission is to empower businesses and individuals
                             through tailored software solutions that seamlessly
@@ -71,10 +77,15 @@ export default function AboutUsPage() {
                         </p>
                     </div>
                     <div className=" flex-1">
-                        <img
+                        {/* <img
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ResKvW1RT7vIhnuhw8CKI3fzrhsqShwvzwfbROopv9tjDvtF6VqyNzAF-epNHm5S8K4&usqp=CAU"
                             alt=""
-                            className=" md:w-3/4 w-full block m-auto "
+                            className=" w-full block m-auto "
+                        /> */}
+                        <img
+                            src="https://www.searchenginejournal.com/wp-content/uploads/2022/01/about-us-page-examples-1-61fd8f9784626-sej.jpg"
+                            alt=""
+                            className=" w-full block m-auto"
                         />
                     </div>
                 </div>

@@ -14,7 +14,7 @@ export default function ContactUs() {
                         say hello, {"we're"} all ears. Fill out the form below,
                         and {"let's"} start a conversation that could lead to
                         something amazing. Your thoughts matter to us, and we
-                        {"can't"} wait to hear from you! 📝💬
+                        {" can't"} wait to hear from you! 📝💬
                     </p>
                     <div className=" flex md:flex-row flex-col gap-3">
                         <input
