@@ -2,7 +2,7 @@ import StarRating from "./StarRating";
 
 export default function TestimonialCard() {
     return (
-        <div className=" font-inter border me-2 p-6 text-center rounded-md text-white bg-slate-700 transition-all duration-300 ease-in-out">
+        <div className=" font-inter border me-2 px-6 py-28 text-center rounded-md text-white bg-slate-700 transition-all duration-300 ease-in-out">
             <img
                 src="https://bebopbusiness.no/wp-content/uploads/2016/12/spearker_1-300x300.jpg"
                 alt=""
