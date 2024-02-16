@@ -1,26 +1,25 @@
 import { useEffect, useState } from "react";
 import Loader from "../../Components/Loader";
 
-export default function Heroes() {
-    const [heroes, setHeroes] = useState([]);
+export default function Careers() {
+    const [careers, setCareers] = useState([]);
     const [loading, setLoading] = useState(false);
-
     useEffect(() => {
-        async function fetchHeroes() {
+        async function fetchCareers() {
             try {
                 setLoading(true);
                 const res = await fetch(
-                    "https://backend-server-hero.onrender.com/hero"
+                    "https://backend-server-hero.onrender.com/career"
                 );
                 const data = await res.json();
                 console.log(data);
-                setHeroes(data);
+                setCareers(data);
                 setLoading(false);
             } catch (error) {
                 console.error(error.message);
             }
         }
-        fetchHeroes();
+        fetchCareers();
     }, []);
 
     if (loading)
@@ -32,20 +31,18 @@ export default function Heroes() {
     return (
         <div className="relative overflow-x-auto">
             <h2 className="text-3xl md:text-5xl font-bold mb-2 md:my-12 text-[#444] ">
-                Heroes Section
+                Careers Section
             </h2>
-            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-12 ">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" className="px-6 py-3">
-                            Image
+                            Heading
                         </th>
                         <th scope="col" className="px-6 py-3">
                             Description
                         </th>
-                        <th scope="col" className="px-6 py-3">
-                            Punchline
-                        </th>
+
                         <th scope="col" className="px-6 py-3">
                             Edit
                         </th>
@@ -55,7 +52,7 @@ export default function Heroes() {
                     </tr>
                 </thead>
                 <tbody>
-                    {heroes.map((hero, i) => {
+                    {careers.map((career, i) => {
                         return (
                             <tr
                                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
@@ -63,20 +60,14 @@ export default function Heroes() {
                             >
                                 <td
                                     scope="row"
-                                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                                    className="px-6 py-4 font-medium text-gray-900  dark:text-white max-w-lg "
                                 >
-                                    <img
-                                        src={hero.heroImage}
-                                        alt=""
-                                        className=" w-14 h-14 rounded-full border-white box-content"
-                                    />
+                                    {career.heading}
                                 </td>
                                 <td className="px-6 py-4 max-w-lg">
-                                    {hero.description}
+                                    {career.description}
                                 </td>
-                                <td className="px-6 py-4 max-w-lg">
-                                    {hero.punchLine}
-                                </td>
+
                                 <td className="px-6 py-4">Edit</td>
                                 <td className="px-6 py-4">Delete</td>
                             </tr>

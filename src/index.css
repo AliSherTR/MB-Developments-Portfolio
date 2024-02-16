@@ -8,3 +8,8 @@ html {
     -webkit-scroll-behavior: smooth;
     scroll-behavior: smooth;
 }
+
+.active {
+    color: greenyellow;
+    font-weight: 800;
+}
