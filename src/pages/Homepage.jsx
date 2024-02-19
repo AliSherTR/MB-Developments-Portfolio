@@ -56,6 +56,10 @@ export default function Homepage() {
                 <Careers />
                 <OurTeam />
                 <Testimonials />
+                <h1 className="p-2 bg-red-400 text-white rounded-lg animate-pulse font-semibold">
+                    The form is not working yet if you wanna contact us use the
+                    email in the footer
+                </h1>
                 <ContactUs />
             </main>
             <button

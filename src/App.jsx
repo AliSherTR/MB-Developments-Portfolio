@@ -6,6 +6,7 @@ import ContactUsPage from "./pages/ContactUsPage";
 import Dashboard from "./pages/admin/Dashboard";
 import Heroes from "./pages/admin/Heroes";
 import Careers from "./pages/admin/Careers";
+import Login from "./pages/admin/Login";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route path="/admin/heros" element={<Heroes />} />
                     <Route path="careers" element={<Careers />} />
                 </Route>
+                <Route path="/admin-login" element={<Login />} />
             </Routes>
         </BrowserRouter>
     );
