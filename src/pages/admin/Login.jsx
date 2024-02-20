@@ -1,29 +1,68 @@
 import { useState } from "react";
 import Button from "../../Components/Button";
 import logo from "../../assets/logo.jpg";
-import { ToastContainer, toast } from "react-toastify";
+import toast from "react-hot-toast";
+import { useUser } from "../../context/UserContext";
+import Loader from "../../Components/Loader";
+import { Navigate } from "react-router-dom";
+
 export default function Login() {
     const [formData, setFormData] = useState({ username: "", password: "" });
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const user = useUser();
 
     function resetForm() {
         setFormData({ username: "", password: "" });
     }
-    function handleSumbit() {
-        if (!formData.username) {
-            toast.error("OOPS");
-            resetForm();
-            return;
+
+    async function LoginAdmin(data, user) {
+        try {
+            setLoading(true);
+            const response = await fetch(
+                "https://backend-server-hero.onrender.com/login",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                }
+            );
+            const responseData = await response.json();
+            user.login(responseData.token);
+            setLoading(false);
+            return true;
+        } catch (error) {
+            setLoading(false);
+            toast.error("Invalid Username or password");
+            return false;
         }
-        if (!formData.password) {
-            resetForm();
-            return;
-        }
-        console.log(formData.username);
-        console.log(formData.password);
     }
+
+    async function handleSumbit(event) {
+        event.preventDefault();
+        if (!formData.username || !formData.password) {
+            toast.error("Please enter a username and password");
+            resetForm();
+            return;
+        }
+
+        const success = await LoginAdmin(formData, user);
+        if (success) {
+            setSuccess(true);
+        }
+    }
+
+    if (loading)
+        return (
+            <div className=" h-screen flex items-center justify-center">
+                <Loader />
+            </div>
+        );
+    if (success) return <Navigate to={"/admin/heros"} />;
     return (
         <main className=" min-h-screen flex items-center justify-center flex-col">
-            <ToastContainer position="top-left" />
             <div className="p-10 border shadow-lg rounded-lg md:w-1/3">
                 <form className=" flex flex-col gap-5  mb-4 ">
                     <img
@@ -78,13 +117,10 @@ export default function Login() {
                             }
                         />
                     </div>
+                    <button type="submit" onClick={(e) => handleSumbit(e)}>
+                        Submit
+                    </button>
                 </form>
-                <Button
-                    text="Login"
-                    onClick={() => {
-                        handleSumbit();
-                    }}
-                />
             </div>
         </main>
     );

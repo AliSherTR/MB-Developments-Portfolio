@@ -7,22 +7,51 @@ import Dashboard from "./pages/admin/Dashboard";
 import Heroes from "./pages/admin/Heroes";
 import Careers from "./pages/admin/Careers";
 import Login from "./pages/admin/Login";
+import { Toaster } from "react-hot-toast";
+import { UserProvider } from "./context/UserContext";
+import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Homepage />} />
-                <Route path="/services" element={<ServicePage />} />
-                <Route path="/about-us" element={<AboutUsPage />} />
-                <Route path="/contact-us" element={<ContactUsPage />} />
-                <Route path="/admin" element={<Dashboard />}>
-                    <Route path="/admin/heros" element={<Heroes />} />
-                    <Route path="careers" element={<Careers />} />
-                </Route>
-                <Route path="/admin-login" element={<Login />} />
-            </Routes>
-        </BrowserRouter>
+        <UserProvider>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Homepage />} />
+                    <Route path="/services" element={<ServicePage />} />
+                    <Route path="/about-us" element={<AboutUsPage />} />
+                    <Route path="/contact-us" element={<ContactUsPage />} />
+                    <Route
+                        path="/admin"
+                        element={
+                            <PrivateRoute>
+                                <Dashboard />
+                            </PrivateRoute>
+                        }
+                    >
+                        <Route path="/admin/heros" element={<Heroes />} />
+                        <Route path="careers" element={<Careers />} />
+                    </Route>
+                    <Route path="/admin-login" element={<Login />} />
+                </Routes>
+                <Toaster
+                    position="top-right"
+                    toastOptions={{
+                        success: {
+                            duration: 3000,
+                        },
+                        error: {
+                            duration: 5000,
+                        },
+                        style: {
+                            fontSize: "16px",
+                            width: "300px",
+                            maxWidth: "500px",
+                            padding: "10px 24px",
+                        },
+                    }}
+                />
+            </BrowserRouter>
+        </UserProvider>
     );
 }
 
