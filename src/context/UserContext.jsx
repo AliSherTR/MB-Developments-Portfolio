@@ -18,6 +18,7 @@ export const UserProvider = ({ children }) => {
     // Function to clear user and token
     const logout = () => {
         setToken(null);
+        // window.location.reload();
     };
 
     // Value object to provide to the context consumers

@@ -87,7 +87,7 @@ export default function Header() {
                         ))}
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <Button text={"Log In"} />
+                        <Button text={"Log In"} location={"/admin-login"} />
                     </div>
                 </nav>
                 <Dialog

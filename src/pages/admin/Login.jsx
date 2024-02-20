@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Button from "../../Components/Button";
 import logo from "../../assets/logo.jpg";
 import toast from "react-hot-toast";
 import { useUser } from "../../context/UserContext";
@@ -35,7 +34,7 @@ export default function Login() {
             return true;
         } catch (error) {
             setLoading(false);
-            toast.error("Invalid Username or password");
+            toast.error(error.message);
             return false;
         }
     }
@@ -117,8 +116,12 @@ export default function Login() {
                             }
                         />
                     </div>
-                    <button type="submit" onClick={(e) => handleSumbit(e)}>
-                        Submit
+                    <button
+                        type="submit"
+                        className=" self-start px-3 py-3 pe-6 bg-blue-900 text-white font-semibold hover:bg-blue-700 transition-all duration-200 ease-in-out rounded-md "
+                        onClick={(e) => handleSumbit(e)}
+                    >
+                        Submit &rarr;
                     </button>
                 </form>
             </div>
