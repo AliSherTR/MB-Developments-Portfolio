@@ -1,26 +1,20 @@
 import { useEffect, useState } from "react";
+import { useUser } from "../../context/UserContext";
 import Loader from "../../Components/Loader";
+import { deleteHero, fetchHeroes } from "../../utils/helpers";
 
 export default function Heroes() {
     const [heroes, setHeroes] = useState([]);
     const [loading, setLoading] = useState(false);
-
+    const { token } = useUser();
     useEffect(() => {
-        async function fetchHeroes() {
-            try {
-                setLoading(true);
-                const res = await fetch(
-                    "https://backend-server-hero.onrender.com/hero"
-                );
-                const data = await res.json();
-                console.log(data);
-                setHeroes(data);
-                setLoading(false);
-            } catch (error) {
-                console.error(error.message);
-            }
+        async function fetchData() {
+            setLoading(true);
+            const data = await fetchHeroes();
+            setHeroes(data);
+            setLoading(false);
         }
-        fetchHeroes();
+        fetchData();
     }, []);
 
     if (loading)
@@ -55,7 +49,7 @@ export default function Heroes() {
                     </tr>
                 </thead>
                 <tbody>
-                    {heroes.map((hero, i) => {
+                    {heroes?.map((hero, i) => {
                         return (
                             <tr
                                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
@@ -78,7 +72,11 @@ export default function Heroes() {
                                     {hero.punchLine}
                                 </td>
                                 <td className="px-6 py-4">
-                                    <button>
+                                    <button
+                                        onClick={() => {
+                                            deleteHero(hero._id, token);
+                                        }}
+                                    >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"

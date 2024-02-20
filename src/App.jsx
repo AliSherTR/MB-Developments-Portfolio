@@ -44,7 +44,6 @@ function App() {
                         },
                         style: {
                             fontSize: "16px",
-                            width: "800px",
                             maxWidth: "800px",
                             padding: "10px 24px",
                         },

@@ -12,7 +12,6 @@ export default function Careers() {
                     "https://backend-server-hero.onrender.com/career"
                 );
                 const data = await res.json();
-                console.log(data);
                 setCareers(data);
                 setLoading(false);
             } catch (error) {

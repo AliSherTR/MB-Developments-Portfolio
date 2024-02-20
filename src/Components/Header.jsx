@@ -7,7 +7,7 @@ import logo from "../assets/logo.jpg";
 const navigation = [
     { name: "About Us", href: "/about-us" },
     { name: "Services", href: "/services" },
-    { name: "Marketplace", href: "#" },
+    { name: "Careers", href: "/careers" },
     { name: "Contact Us", href: "/contact-us" },
 ];
 
