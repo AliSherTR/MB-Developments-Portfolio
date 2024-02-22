@@ -17,7 +17,7 @@ export default function Heroes() {
             setLoading(false);
         }
         fetchData();
-    }, []);
+    }, [setHeroes]);
 
     if (loading)
         return (

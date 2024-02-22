@@ -1,26 +1,31 @@
 import { useEffect, useState } from "react";
 import Loader from "../../Components/Loader";
+import AddCareerForm from "../../Components/AddCareerForm";
+import { deleteCareer, fetchCareers } from "../../utils/helpers";
+import { useUser } from "../../context/UserContext";
 
 export default function Careers() {
     const [careers, setCareers] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [showForm, setShowForm] = useState(false);
+    const { token } = useUser();
 
     useEffect(() => {
-        async function fetchCareers() {
-            try {
-                setLoading(true);
-                const res = await fetch(
-                    "https://backend-server-hero.onrender.com/career"
-                );
-                const data = await res.json();
-                setCareers(data);
-                setLoading(false);
-            } catch (error) {
-                console.error(error.message);
-            }
+        async function fetchData() {
+            setLoading(true);
+            const data = await fetchCareers();
+            setCareers(data);
+            setLoading(false);
         }
-        fetchCareers();
+        fetchData();
     }, []);
+    const handleDeleteCareer = async (careerId) => {
+        setLoading(true);
+        await deleteCareer(careerId, token);
+        const updatedCareers = await fetchCareers();
+        setCareers(updatedCareers);
+        setLoading(false);
+    };
 
     if (loading)
         return (
@@ -69,7 +74,11 @@ export default function Careers() {
                                 </td>
 
                                 <td className="px-6 py-4">
-                                    <button>
+                                    <button
+                                        onClick={() => {
+                                            handleDeleteCareer(career._id);
+                                        }}
+                                    >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
@@ -109,6 +118,14 @@ export default function Careers() {
                     })}
                 </tbody>
             </table>
+            <button
+                onClick={() => setShowForm(!showForm)}
+                className=" self-end my-2 ms-auto block me-3 text-white bg-blue-900 rounded-lg px-4 py-3 "
+            >
+                Add Career
+            </button>
+
+            {showForm && <AddCareerForm onclick={() => setShowForm(false)} />}
         </div>
     );
 }
