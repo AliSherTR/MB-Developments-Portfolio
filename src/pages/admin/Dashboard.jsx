@@ -45,7 +45,7 @@ export default function Dashboard() {
                     <NavLink to="/admin/careers/">Careers</NavLink>
                 </div>
             </aside>
-            <main className="col-start-3 col-span-full h-screen  overflow-y-scroll p-3">
+            <main className="col-start-3 col-span-full h-screen overflow-y-scroll  p-3">
                 <Outlet />
             </main>
         </div>

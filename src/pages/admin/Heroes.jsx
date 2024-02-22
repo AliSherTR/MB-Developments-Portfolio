@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { useUser } from "../../context/UserContext";
 import Loader from "../../Components/Loader";
 import { deleteHero, fetchHeroes } from "../../utils/helpers";
+import AddHeroForm from "../../Components/AddHeroForm";
 
 export default function Heroes() {
     const [heroes, setHeroes] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [showForm, setShowForm] = useState(false);
     const { token } = useUser();
     useEffect(() => {
         async function fetchData() {
@@ -24,7 +26,7 @@ export default function Heroes() {
             </div>
         );
     return (
-        <div className="relative overflow-x-auto">
+        <div className="relative overflow-x-auto overflow-y-scroll">
             <h2 className="text-3xl md:text-5xl font-bold mb-2 md:my-12 text-[#444] ">
                 Heroes Section
             </h2>
@@ -116,6 +118,18 @@ export default function Heroes() {
                     })}
                 </tbody>
             </table>
+            <button
+                onClick={() => setShowForm(!showForm)}
+                className=" self-end my-2 ms-auto block me-3 text-white bg-blue-900 rounded-lg px-4 py-3 "
+            >
+                Add Hero
+            </button>
+
+            {showForm && (
+                <div>
+                    <AddHeroForm onclick={() => setShowForm(false)} />
+                </div>
+            )}
         </div>
     );
 }
