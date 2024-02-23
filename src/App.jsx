@@ -10,6 +10,7 @@ import Login from "./pages/admin/Login";
 import { Toaster } from "react-hot-toast";
 import { UserProvider } from "./context/UserContext";
 import PrivateRoute from "./utils/PrivateRoute";
+import CareersPage from "./pages/CareersPage";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/services" element={<ServicePage />} />
                     <Route path="/about-us" element={<AboutUsPage />} />
                     <Route path="/contact-us" element={<ContactUsPage />} />
+                    <Route path="/careers" element={<CareersPage />} />
                     <Route
                         path="/admin"
                         element={

@@ -19,6 +19,14 @@ export default function Heroes() {
         fetchData();
     }, [setHeroes]);
 
+    const handleDeleteHero = async (careerId) => {
+        setLoading(true);
+        await deleteHero(careerId, token);
+        const updatedCareers = await fetchHeroes();
+        setHeroes(updatedCareers);
+        setLoading(false);
+    };
+
     if (loading)
         return (
             <div className=" h-full flex items-center justify-center">
@@ -76,7 +84,7 @@ export default function Heroes() {
                                 <td className="px-6 py-4">
                                     <button
                                         onClick={() => {
-                                            deleteHero(hero._id, token);
+                                            handleDeleteHero(hero._id);
                                         }}
                                     >
                                         <svg

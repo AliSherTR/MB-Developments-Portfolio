@@ -18,19 +18,29 @@ export default function Login() {
     async function LoginAdmin(data, user) {
         try {
             setLoading(true);
-            const response = await fetch(
-                "https://backend-server-hero.onrender.com/login",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(data),
+            try {
+                const response = await fetch(
+                    "https://backend-server-hero.onrender.com/login",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(data),
+                    }
+                );
+                const responseData = await response.json();
+                if (responseData.error === "Invalid credentials") {
+                    toast.error("Invalid User name or password");
+                    setLoading(false);
+                    return;
                 }
-            );
-            const responseData = await response.json();
-            user.login(responseData.token);
-            setLoading(false);
+
+                user.login(responseData.token);
+                setLoading(false);
+            } catch (error) {
+                toast.error(error.message);
+            }
             return true;
         } catch (error) {
             setLoading(false);
