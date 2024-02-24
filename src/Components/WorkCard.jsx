@@ -9,12 +9,12 @@ export default function WorkCard({ heading, items }) {
                     <div className="text-base text-[#444] ">
                         {items?.map((item, i) => {
                             return (
-                                <>
-                                    <p className=" mb-2" key={i}>
+                                <div key={i}>
+                                    <p className=" mb-2">
                                         <b>{item.heading}:</b>{" "}
                                         {item.description}
                                     </p>
-                                </>
+                                </div>
                             );
                         })}
                     </div>

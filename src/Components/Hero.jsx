@@ -2,7 +2,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Slide from "./Slide";
+import { useEffect, useState } from "react";
+import { fetchHeroes } from "../utils/helpers";
 export default function Hero() {
+    const [hereos, setHeroes] = useState([]);
+    useEffect(() => {
+        async function fetchData() {
+            const data = await fetchHeroes();
+            setHeroes(data);
+        }
+        fetchData();
+    });
     const settings = {
         dots: false,
         infinite: true,
@@ -14,8 +24,9 @@ export default function Hero() {
         arrows: false,
         autoplay: true,
     };
-    return (
-        <>
+
+    if (!hereos?.length) {
+        return (
             <Slider {...settings}>
                 <Slide
                     imageUrl={
@@ -45,6 +56,20 @@ export default function Hero() {
                     featureLine={"A New Future"}
                     text={"Defining the future with latest technology and"}
                 />
+            </Slider>
+        );
+    }
+    return (
+        <>
+            <Slider {...settings}>
+                {hereos?.map((hero) => (
+                    <Slide
+                        imageUrl={hero.heroImage}
+                        key={hero._id}
+                        featureLine={hero.punchLine}
+                        text={hero.description}
+                    />
+                ))}
             </Slider>
         </>
     );

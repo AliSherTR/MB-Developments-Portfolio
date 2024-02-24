@@ -1,9 +1,39 @@
+import { useState } from "react";
+import { addHero } from "../utils/helpers";
+import { useUser } from "../context/UserContext";
+
 export default function AddHeroForm({ onclick }) {
+    const [formData, setFormData] = useState({
+        description: "",
+        punchline: "",
+        image: null,
+    });
+
+    const { token } = useUser();
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        await addHero(formData, token);
+    };
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        setFormData({
+            ...formData,
+            image: file,
+        });
+    };
     return (
         <div className="modal-background">
             <div className="modal-content">
-                <div className=" flex justify-between mb-4">
-                    <h1 className=" text-lg font-bold text-[#444]">
+                <div className="flex justify-between mb-4">
+                    <h1 className="text-lg font-bold text-[#444]">
                         Add Hero form
                     </h1>
                     <button className="" onClick={onclick}>
@@ -24,47 +54,53 @@ export default function AddHeroForm({ onclick }) {
                     </button>
                 </div>
 
-                <form className="flex flex-col gap-5 mb-4">
+                <form
+                    className="flex flex-col gap-5 mb-4"
+                    onSubmit={handleSubmit}
+                >
                     <div>
-                        <label
-                            htmlFor="herodescription"
-                            className=" mb-2 block"
-                        >
+                        <label htmlFor="herodescription" className="mb-2 block">
                             Description
                         </label>
                         <textarea
-                            type="text"
+                            name="description"
                             id="herodescription"
                             placeholder="Description"
-                            className=" border rounded-md px-3 w-full"
+                            value={formData.description}
+                            onChange={handleInputChange}
+                            className="border rounded-md px-3 w-full"
                         />
                     </div>
                     <div>
-                        <label
-                            htmlFor="herodescription"
-                            className=" mb-2 block"
-                        >
-                            Puncline
+                        <label htmlFor="heropunchline" className="mb-2 block">
+                            Punchline
                         </label>
                         <input
                             type="text"
+                            name="punchline"
                             placeholder="Punchline"
-                            className=" border rounded-md px-3 py-2 w-full "
+                            value={formData.punchline}
+                            onChange={handleInputChange}
+                            className="border rounded-md px-3 py-2 w-full"
                         />
                     </div>
                     <div>
-                        <label
-                            htmlFor="herodescription"
-                            className=" mb-2 block"
-                        >
+                        <label htmlFor="heroimage" className="mb-2 block">
                             Image
                         </label>
                         <input
                             type="file"
-                            placeholder="Punchline"
-                            className=" block"
+                            name="image"
+                            onChange={handleFileChange}
+                            className="block"
                         />
                     </div>
+                    <button
+                        type="submit"
+                        className="bg-blue-500 text-white px-4 py-2 rounded-md"
+                    >
+                        Submit
+                    </button>
                 </form>
             </div>
         </div>

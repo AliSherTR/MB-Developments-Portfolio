@@ -31,8 +31,8 @@ const footerLinks = [
         href: "/services",
     },
     {
-        name: "Marketplace",
-        href: "#",
+        name: "Careers",
+        href: "/careers",
     },
     {
         name: "Contact Us",

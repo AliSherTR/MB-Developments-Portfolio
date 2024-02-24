@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchCareers } from "../utils/helpers";
 import CareerCard from "./CareerCard";
-
+import Button from "../Components/Button";
 export default function Careers() {
     const [careers, setCareers] = useState([]);
 
@@ -14,7 +14,7 @@ export default function Careers() {
         fetchData();
     }, []);
 
-    if (!careers.length) {
+    if (!careers) {
         return (
             <section
                 id="careers"
@@ -36,6 +36,9 @@ export default function Careers() {
                     and we will get back to you in case there is an opening or
                     we might create a new position for you who knows!!
                 </p>
+                <button className="block ms-auto">
+                    <Button text="Learn More" location="/careers" />
+                </button>
             </section>
         );
     }
@@ -63,6 +66,9 @@ export default function Careers() {
                     );
                 })}
             </div>
+            <button className="block ms-auto">
+                <Button text="Learn More" location="/careers" />
+            </button>
         </section>
     );
 }

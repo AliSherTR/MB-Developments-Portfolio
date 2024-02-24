@@ -27,6 +27,29 @@ export const deleteHero = async (id, token) => {
     }
 };
 
+export const addHero = async (data, token) => {
+    try {
+        const formData = new FormData();
+        formData.append("description", data.description);
+        formData.append("punchline", data.punchline);
+        formData.append("image", data.image);
+
+        const res = await fetch(`${BASE_URL}/hero`, {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+            body: formData,
+        });
+
+        const responseData = await res.json();
+        console.log(responseData);
+        toast.success("Successfully Added!!!");
+    } catch (error) {
+        toast.error(error.message);
+    }
+};
+
 export const fetchCareers = async () => {
     try {
         const res = await fetch(`${BASE_URL}/career`);
@@ -48,6 +71,22 @@ export const deleteCareer = async (id, token) => {
             },
         });
         toast.success("Successfully deleted!!!");
+    } catch (error) {
+        toast.error(error.message);
+    }
+};
+
+export const addCareer = async (data, token) => {
+    try {
+        await fetch(`${BASE_URL}/career`, {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+        toast.success("Successfully Added!!!");
     } catch (error) {
         toast.error(error.message);
     }
