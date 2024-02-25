@@ -30,8 +30,8 @@ export default function Careers() {
                 <p className="mb-4 text-base md:text-lg">
                     We Currently have no job/internship opening but you can send
                     your resume to{" "}
-                    <a href="mailTo:xyz@gmail.com">
-                        <b>xyz@gmail.com</b>
+                    <a href="mailTo:mbdevelopment161@gmail.com">
+                        <b>mbdevelopment161@gmail.com</b>
                     </a>{" "}
                     and we will get back to you in case there is an opening or
                     we might create a new position for you who knows!!
@@ -50,8 +50,8 @@ export default function Careers() {
             <p className="text-base md:text-lg mb-3 text-[#444]">
                 We are Currently hiring for the following positions kindly send
                 your resume to{" "}
-                <a href="mailto:xyz@gmail.com">
-                    <b>xyz@gmail.com</b>
+                <a href="mailto:mbdevelopment161@gmail.com">
+                    <b>mbdevelopment161@gmail.com</b>
                 </a>{" "}
                 and we will get back to you. If you are not eligible for the
                 following positions feel free to send your resume.. We might

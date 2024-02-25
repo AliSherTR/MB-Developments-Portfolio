@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 
 const navigation = [
     { name: "About Us", href: "/about-us" },
@@ -40,16 +40,17 @@ export default function Header() {
                 }}
             >
                 <nav
-                    className="flex items-center justify-between py-5 lg:py-3 md:p-5 px-2 font-inter font-medium text-base lg:px-8"
+                    className="flex items-center justify-between px-2 font-inter font-medium text-base lg:px-8"
                     aria-label="Global"
                 >
-                    <div className="flex lg:flex-1">
-                        <Link to="/" className="">
+                    <div className="flex lg:flex-1 items-center">
+                        <Link to="/" className=" flex items-center">
                             <img
                                 src={logo}
                                 alt="MB Developments"
-                                className=" w-10 h-10 md:w-14 md:h-14 rounded-full "
+                                className=" w-20 h-20 rounded-full "
                             />
+                            <span className=" text-sm">MB Developements</span>
                         </Link>
                     </div>
                     <div className="flex lg:hidden">

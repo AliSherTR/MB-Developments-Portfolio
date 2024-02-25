@@ -171,7 +171,7 @@ export default function Footer() {
                             </svg>
                         </div>
                         <div className=" col-start-2 col-span-8 ">
-                            <span>example@gmail.com</span>
+                            <span>mbdevelopment161@gmail.com</span>
                         </div>
                         <div className=" row-start-2 col-start-2">
                             <span>Pakistan</span>
