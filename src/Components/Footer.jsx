@@ -121,7 +121,7 @@ export default function Footer() {
                             </svg>
                         </div>
                         <div className=" col-start-2 col-span-8 ">
-                            <span>123 NewYork City, 75th street</span>
+                            <span>Abbottabad, KPK </span>
                         </div>
                         <div className=" row-start-2 col-start-2">
                             <span>Pakistan</span>
@@ -146,7 +146,8 @@ export default function Footer() {
                             </svg>
                         </div>
                         <div className=" col-start-2 col-span-8 ">
-                            <span>+92 335588200</span>
+                            <span className=" me-3">+92 3348886936</span>
+                            <span>+92 3405055358 </span>
                         </div>
                         <div className=" row-start-2 col-start-2">
                             <span>Pakistan</span>
