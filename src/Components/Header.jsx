@@ -26,11 +26,11 @@ export default function Header() {
         };
     }, []);
     return (
-        <div className=" relative overflow-hidden">
+        <div className=" relative overflow-hidden py-6">
             <header
                 className={` z-30 top-0 left-0 right-0 transition-all duration-300 ${
                     scrolled
-                        ? "text-white fixed transition-all"
+                        ? "text-white fixed transition-all py-4"
                         : " text-[#444]"
                 }`}
                 style={{
@@ -48,7 +48,7 @@ export default function Header() {
                             <img
                                 src={logo}
                                 alt="MB Developments"
-                                className=" w-20 h-20 rounded-full "
+                                className=" w-14 h-14 p-[4px] rounded-full "
                             />
                             <span className=" text-sm">MB Developements</span>
                         </Link>
@@ -133,22 +133,22 @@ export default function Header() {
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
                                     {navigation.map((item) => (
-                                        <a
+                                        <Link
                                             key={item.name}
-                                            href={item.href}
+                                            to={item.href}
                                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                         >
                                             {item.name}
-                                        </a>
+                                        </Link>
                                     ))}
                                 </div>
                                 <div className="py-6">
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/admin-login"
                                         className="rounded-md bg-blue-700 px-5 py-2.5 font-roboto font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 md:m-auto"
                                     >
                                         Log in
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

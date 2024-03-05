@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo.png";
 import toast from "react-hot-toast";
 import { useUser } from "../../context/UserContext";
 import Loader from "../../Components/Loader";

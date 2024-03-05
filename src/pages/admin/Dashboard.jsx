@@ -1,5 +1,5 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo.png";
 import { useUser } from "../../context/UserContext";
 
 export default function Dashboard() {
